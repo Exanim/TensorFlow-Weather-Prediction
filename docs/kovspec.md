@@ -16,6 +16,21 @@ beírni az Ön városát és máris öltözködhet az igényei szerint!
 > mestere, és hagyd, hogy a fejlődés szárnyakat adjon álmaidnak a programozás végtelen univerzumában!”
 > -- <cite>ChatGPT 3.5</cite>
 
+Előző alkalmazásunkban a felhasználók egy különböző elemekből felépített felületet láthattak, melyen
+dinamikusan jelenítettük meg az időjárást. A felhasználó egy keresősáv segítségével kereshetett a különböző
+települések között. A keresés gomb lenyomásával az alkalmazás kiírta a felületre a hőmérsékletet, a település
+nevét, a százalékos páratartalmat és a szél sebességét. Az alkalmazás tartalmazta az időjárásolvasáshoz
+szükséges összes adatot. Ez egy szép és jó elképzelés volt, azonban mi többet akartunk. Elhatároztuk, hogy
+megalkotjuk a világ legjobb időjárás alkalmazását. Az új alkalmazásunkban a felhasználók egy szép, igényes
+felületen, továbbra is megkapják az időjárás adatait. Azonban az új alkalmazásunkban a felhasználók egy
+általunk készített háttéralkalmazással képesek az adatok megszerzésére, mely nem igényel külön
+alkalmazást, pusztán meglévő történelmi adatokkal dolgozva jelenítjük meg az előrelátható időjárást. Tény,
+hogy az időjárás előrejelzés nem mindig pontos, azonban mi ezt megoldottuk. Az alkalmazásunkban a
+„TensorFlow” nevű Python alapú nyílt forráskódú szoftverkönyvtárat használjuk, melyet a Google Brain
+csapata fejlesztett ki. A TensorFlow egy gépi tanulási keretrendszer, amelyet a Google a neurális hálózatok és
+a mély tanulás kifejlesztésére használ. A megoldásunkkal fölöslegessé válnak különböző időjárásmérő
+eszközök, hiszen alkalmazásunk anélkül is már többtíz évvel ezelőtti adatokból dolgozik.
+
 
 ### Vágyálom rendszer:
 Célunk ügyfeleink naprakész, percre pontos információk szerzése a jelenlegi időjárásról annak céljából, hogy ne érhessék
