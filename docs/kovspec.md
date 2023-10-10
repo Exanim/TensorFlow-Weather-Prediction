@@ -37,7 +37,11 @@ Célunk ügyfeleink naprakész, percre pontos információk szerzése a jelenleg
 meglepetések utazás, kirándulás esetében, hogy tudják, mikor hogyan kell öltözködniük és mit kell magukkal vinniük az
 utazásokra. Az alkalmazásnak könnyen üzemeltethetőnek kell lennie. Az online megjelenítésnek lehetőleg reszponzívnak
 kell lennie, hogy mobil / tablet illetve számítógép eszközökön is szépen, jól láthatóan megjelenített legyen. Elvárt a
-platformfüggetlenség, nem elfogadható, ha csak egy operációs rendszeren futtatható az alkalmazás.
+platformfüggetlenség, nem elfogadható, ha csak egy operációs rendszeren futtatható az alkalmazás. Elvárt, hogy az alkalmazás a felhasználók által megadott
+településre vonatkozóan megjelenítse az aktuális időjárási adatokat, valamint az előrejelzést. Az
+alkalmazásnak folyamatosan tudnia kell kommunikálni a meglévő adatbázissal, hogy a felhasználók a lehető
+legpontosabb adatokat kapják meg. Nem elfogadható, ha az alkalmazás nem pontos adatot közöl a
+felhasználókkal.
 
 #### További vágyálmok:
 
