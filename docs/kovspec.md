@@ -12,6 +12,10 @@ megfigyelésére alkalmas. Jelen és jövőbeli időjárás megfigyelése. Az id
 szél és egyéb időjárással kapcsolatos státusz megosztását / megjelenítését. Csak meg kell nyitnia alkalmazásunkat,
 beírni az Ön városát és máris öltözködhet az igényei szerint!
 
+> „Ahogyan a kód mindig fejlődik, úgy fejlődik benned is a tudás és a szakértelmesség. Legyél az innováció
+> mestere, és hagyd, hogy a fejlődés szárnyakat adjon álmaidnak a programozás végtelen univerzumában!”
+> -- <cite>ChatGPT 3.5</cite>
+
 
 ### Vágyálom rendszer:
 Célunk ügyfeleink naprakész, percre pontos információk szerzése a jelenlegi időjárásról annak céljából, hogy ne érhessék
