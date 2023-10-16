@@ -3,3 +3,4 @@ This is a Weather app which predicts future weather with the help of Tensorflow 
 
 - [Követelmény specifikáció](docs/kovspec.md)
 - [Funkcionális specifikáció](docs/funkspec.md)
+- [Rendszerterv](docs/rendszerterv.md)
