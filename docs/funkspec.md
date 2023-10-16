@@ -2,12 +2,18 @@
 
 ### Áttekintés
 
-A Weather app egy olyan alkalmazás, amely lehetővé teszi a felhasználók számára, hogy könnyen és gyorsan hozzáférjenek
-az időjárási információkhoz. Az alkalmazás kártyákon jeleníti meg az időjárási adatokat, amelyek közül az első kártyán
-az aktuális hőmérséklet kap kiemelt szerepet. A további négy kártya grafikus formában mutatja be az előrejelzéseket a
-következő napokra, segítve a felhasználókat a jövőbeli időjárás feltételeinek jobb megértésében.
+A Tensorflow alapú Weather app egy olyan alkalmazás, amely lehetővé teszi a felhasználók számára, hogy
+könnyen és gyorsan hozzáférjenek az időjárási információkhoz. Az alkalmazás kártyákon jeleníti meg az időjárási
+adatokat, amelyek közül az első kártyán az aktuális hőmérséklet kap kiemelt szerepet. A további négy kártya
+grafikus formában mutatja be az előrejelzéseket a következő napokra, segítve a felhasználókat a jövőbeli
+időjárás feltételeinek jobb megértésében. A Tensorflowwal történő bővítés felelős azért, hogy az alkalmazás úgy
+működjön, hogy ne legyen szükséges hozzá felállított időjárásmérő eszköz, pusztán a már meglévő többtíz évvel
+ezelőtti időjárás adatokból dolgozva egy általunk futtatott back-end szerverről az időjárásokat a Tensorflow
+segítségével meg tudjuk állapítani többnyire pontos outputtal. Természetesen egy ilyen módon történő
+időjárástippelés nagyon megbízhatatlan lenne, azonban a mi alkalmazásunk tesz arról, hogy ez tökéletesen
+pontosan működjön!
 
-Az alkalmazás felhasználóbarát és könnyen használható, és a felhasználók bármely platformon, legyen az számítógép,
+Az alkalmazás felhasználóbarát, könnyen használható, és a felhasználók bármely platformon, legyen az számítógép,
 tablet vagy telefon, gyorsan megtalálják a kívánt helyszín időjárását. Az ingyenes elérhetőség lehetővé teszi bárki
 számára, hogy naprakész időjárási adatokhoz jusson. Az alkalmazás a funkcionalitásra és a felhasználói élményre
 összpontosít, hogy egyszerűsítse az időjárásinformációk elérését és használatát.
@@ -35,7 +41,7 @@ feliratkozói díjazás csökkentik a felhasználói élményt.
 
 ### Követelménylista
 
-- Kártya jellegű megjelenítés, ahol a mai és a következő 4 nap előre látható / jelenlegi időjárása megjelenik
+- Kártya jellegű megjelenítés, ahol a mai és a következő napokra előre látható / jelenlegi időjárása megjelenik
 
 - A kártyák tartalmazzanak egy napocskát, amennyiben az idő napos, valamint egy felhőt, amennyiben felhős
 
@@ -72,7 +78,10 @@ meglepetések utazás, kirándulás esetében. Tudják, mikor hogyan kell öltö
 az utazásokra. Az alkalmazásnak könnyen üzemeltethetőnek kell lennie. Az online megjelenítésnek lehetőleg reszponzívnak
 kell lennie, hogy mobil / tablet illetve számítógép eszközökön is szépen, jól láthatóan megjelenített legyen.
 Az ügyfélnek négy következő napon kívül a mai napnak is láthatónak kell lennie, hogy milyen időjárásra kell számítani. Elvárt a
-platformfüggetlenség, nem elfogadható, ha csak egy operációs rendszeren futtatható az alkalmazás.
+platformfüggetlenség, nem elfogadható, ha csak egy operációs rendszeren futtatható az alkalmazás. Elvárás, hogy az alkalmazás a Tensorflow alapú Python nyelvben
+íródott alkalmazással történjen és az időjárás adatait ne egy felállított időjárás API-jal működtesse, hanem egy
+általunk megírt backenddel, melyen egy dropdown menüből kiválasztja a felhasználó a számára érdekes várost,
+majd kiválaszthatja, hogy annak a városnak mely adatára kíváncsi.
 
 ### Jelenlegi üzleti folyamatok leírása
 
