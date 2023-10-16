@@ -21,3 +21,16 @@
 - TensorFlow modell elkészítése: TBA
 - EndPointok létrehozása: TBA
 - Backend Frontend kommunikáció implementálása: TBA
+
+| Funkció      | Feladat           | Prioritás | Becslés (h) | Eltelt idő (h) | Hátralévő idő (h) |
+|:-------------|:------------------|:---------:|:-----------:|:--------------:|:-----------------:|
+| KövSpec      |                   |     6     |      2      |       2        |         0         |
+| Funkspec     |                   |     6     |      2      |       0        |         2         |
+| Rendszerterv |                   |     6     |      2      |       1        |         1         |
+| WebApp       | Frontend Stílus   |     5     |             |                |                   |
+|              | Frontend Vezérlés |     5     |             |                |                   |
+|              | Frontend Teszelés |     5     |             |                |                   |
+| API          | Adatok beolvasása |     3     |             |                |                   |
+| Backend      | TensorFlow modell |     0     |             |                |                   |
+|              | Adatok lementése  |     2     |             |                |                   |
+|              | Backend Tesztelés |     2     |             |                |                   |
