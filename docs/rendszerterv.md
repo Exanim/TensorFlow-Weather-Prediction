@@ -1,3 +1,6 @@
+<style>
+ r { color:Red }
+</style>
 # Rendszerterv
 
 ## A Rendszer célja
@@ -22,15 +25,15 @@
 - EndPointok létrehozása: TBA
 - Backend Frontend kommunikáció implementálása: TBA
 
-| Funkció      | Feladat           | Prioritás | Becslés (h) | Eltelt idő (h) | Hátralévő idő (h) |
-|:-------------|:------------------|:---------:|:-----------:|:--------------:|:-----------------:|
-| KövSpec      |                   |     6     |      2      |       2        |         0         |
-| Funkspec     |                   |     6     |      2      |       0        |         2         |
-| Rendszerterv |                   |     6     |      2      |       1        |         1         |
-| WebApp       | Frontend Stílus   |     5     |             |                |                   |
-|              | Frontend Vezérlés |     5     |             |                |                   |
-|              | Frontend Teszelés |     5     |             |                |                   |
-| API          | Adatok beolvasása |     3     |             |                |                   |
-| Backend      | TensorFlow modell |     0     |             |                |                   |
-|              | Adatok lementése  |     2     |             |                |                   |
-|              | Backend Tesztelés |     2     |             |                |                   |
+| Funkció      | Feladat           | Prioritás | Becslés (h:mm) | Eltelt idő (h:mm) | Hátralévő idő (h:mm) |
+|:-------------|:------------------|:---------:|:--------------:|:-----------------:|:--------------------:|
+| KövSpec      |                   | <r>6</r>  |      2:00      |       2:00        |         0:00         |
+| Funkspec     |                   |     6     |      2:00      |       0:00        |         2:00         |
+| Rendszerterv |                   |     6     |      2:00      |       1:00        |         1:00         |
+| WebApp       | Frontend Stílus   |     5     |      2:00      |       0:00        |         2:00         |
+|              | Frontend Vezérlés |     5     |     10:00      |       0:00        |        10:00         |
+|              | Frontend Teszelés |     5     |      2:00      |       0:00        |         2:00         |
+| API          | Adatok beolvasása |     3     |      4:00      |       0:00        |         4:00         |
+| Backend      | TensorFlow modell |     0     |     20:00      |       0:00        |        20:00         |
+|              | Adatok lementése  |     2     |      3:00      |       0:00        |         3:00         |
+|              | Backend Tesztelés |     2     |      5:00      |       0:00        |         5:00         |
