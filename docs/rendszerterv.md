@@ -1,6 +1,3 @@
-<style>
- r { color:Red }
-</style>
 # Rendszerterv
 
 ## A Rendszer célja
@@ -27,7 +24,7 @@
 
 | Funkció      | Feladat           | Prioritás | Becslés (h:mm) | Eltelt idő (h:mm) | Hátralévő idő (h:mm) |
 |:-------------|:------------------|:---------:|:--------------:|:-----------------:|:--------------------:|
-| KövSpec      |                   | <r>6</r>  |      2:00      |       2:00        |         0:00         |
+| KövSpec      |                   |     6     |      2:00      |       2:00        |         0:00         |
 | Funkspec     |                   |     6     |      2:00      |       0:00        |         2:00         |
 | Rendszerterv |                   |     6     |      2:00      |       1:00        |         1:00         |
 | WebApp       | Frontend Stílus   |     5     |      2:00      |       0:00        |         2:00         |
