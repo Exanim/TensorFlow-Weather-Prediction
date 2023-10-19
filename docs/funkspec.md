@@ -4,8 +4,8 @@
 
 A Tensorflow alapú Weather app egy olyan alkalmazás, amely lehetővé teszi a felhasználók számára, hogy
 könnyen és gyorsan hozzáférjenek az időjárási információkhoz. Az alkalmazás kártyákon jeleníti meg az időjárási
-adatokat, amelyek közül az első kártyán az aktuális hőmérséklet kap kiemelt szerepet. A további négy kártya
-grafikus formában mutatja be az előrejelzéseket a következő napokra, segítve a felhasználókat a jövőbeli
+adatokat, amelyek közül az első kártyán az aktuális hőmérséklet kap kiemelt szerepet. A további kártyák
+grafikus formában mutatják be az előrejelzéseket a következő napokra, segítve a felhasználókat a jövőbeli
 időjárás feltételeinek jobb megértésében. A Tensorflowwal történő bővítés felelős azért, hogy az alkalmazás úgy
 működjön, hogy ne legyen szükséges hozzá felállított időjárásmérő eszköz, pusztán a már meglévő többtíz évvel
 ezelőtti időjárás adatokból dolgozva egy általunk futtatott back-end szerverről az időjárásokat a Tensorflow
