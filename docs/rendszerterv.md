@@ -2,6 +2,23 @@
 
 ## A Rendszer célja
 
+A rendszer célja aktuális regionális időjárási adatok hozzáférésének biztosítása.
+A felhasználónak lehetőséget ad bizonyos települések időjárási adatainak elmentésére.
+A Weather webapplikáció célja az, hogy a felhasználók számára könnyen és gyorsan hozzáférhetővé tegye az időjárási információkat.
+
+A webalkalmazás lehetővé teszi a felhasználók számára, hogy egyszerűen megkeressék a kívánt helyszínt a kereső funkció használatával, és biztosítja az időjárási adatok megjelenítését kártyák formájában.
+Az első kártya kiemelt módon mutatja be az aktuális hőmérsékletet, míg a további kártya grafikusan ábrázolja a többi nap előrejelzését, segítve a felhasználókat a jövőbeli időjárás megértésében.
+
+A webalkalmazás fókuszában a felhasználói élmény és az egyszerűség áll, így mindenki könnyedén
+használhatja bármely platformon, legyen az számítógép, tablet vagy telefon.
+Az ingyenes elérhetőség lehetővé teszi bárki számára, hogy naprakész időjárási adatokhoz jusson.
+A webalkalmazás kártya alapú megjelenítésével a felhasználók gyorsan és könnyen áttekinthetik az időjárási információkat.
+
+Előző alkalmazásunkkal összehasonlítva ez az alkalmazás egy TensorFlow megtanított modellt használ,
+amely a jövőbeli időjárást is képes előre jelezni anélkül, hogy szükség lenne felállított időjáráselőrejlző
+rendszerekre. A modell 120 évvel ezelőtti mindennapos időjárásadatokat tanult meg, és ezek alapján jelzi
+előre a jövőbeli időjárást.
+
 ## Projektterv
 
 ### Projekt szerepkörök
