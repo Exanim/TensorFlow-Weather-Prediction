@@ -4,7 +4,7 @@ body {
   background: #252525;
 }
 
-.main {
+body div.main {
   width: auto;
   min-height: 580px;
   margin: 14vh auto 0 auto;
