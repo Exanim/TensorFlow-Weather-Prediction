@@ -140,3 +140,86 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
     - _Input_: Város időjárásának továbbküldése
     - _Output_: Város időjárásának megjelenítése
     - _Szereplők_: Frontend
+
+## Követelmények
+
+### Funkcionális követelmények
+
+> ### Megtekinteni kivánt város adatainak megjelenítése
+>
+> _Röviden_: Az alkalmazásnak könnyen értelmezhető módon kell megjelenítenie az adatokat.
+>
+> Célunk, hogy minden felhasználó könnyen és akadálymentesen hozzáférjen az időjárási adatokhoz.
+
+> ### Tetszőleges város adatainak lekérdezése
+>
+> _Röviden_: Az alkalmazásnak akadálymentes módszert kell adnia a felhasználónak az általa kiválasztott város időjárási adatainak megjelenítésére.
+>
+> Célunk, hogy minden felhasználó képes legyen váltogatni tetszőleges városok adatai között.
+
+> ### Előrejelzés megjelenítése
+>
+> _Röviden_: Az alkalmazásunk a felhasználó által válaszott város elkövetkező öt napjának előrejelzését
+> _kártyákban_ jeleníti meg, melyek egyesével fél másodperc késéssel jelennek meg a felhasználó
+> számára.
+>
+> Célunk ezzel, hogy a felhasználó előre tudjon kalkulálni a terveivel, valamint a szép lassú megjelenítés
+> célja, hogy a felhasználó ne kapjon információtúlterhelést.
+
+> ### Geoadatlekérő API-jal történő kommunikáció
+>
+> _Röviden_: Az alkalmazásnak kommunikálni kell tudni az OpenWeatherMap GeoData API-jával
+>
+> Célunk ezzel, hogy tovább tudjuk szállítani a megkapott adatot az OpenWeatherMap
+> FiveDaysForecast API-jával
+
+> ### Előrejelzés API-jával történő kommunikáció
+>
+> _Röviden_: Az alkalmazásnak kommunikálnia kell tudni az OpenWeatherMap Five Days Forecast API-
+> jával
+>
+> Célunk ezzel, hogy a kötelezően megadandó geodatból érkező _'lat'_ és _'lon'_ térképpozicionálással
+> kapcsolatos változókból az előrejelzés API-jának küldött **GET** kérés testéből a válasz testében lévő
+> válaszból kapott adattal tudjon dolgozni az alkalmazásunk, ezáltal a szükséges megjelenítés ellátható
+> lesz azokkal
+
+### Nemfunkcionális követelmények
+
+> ### A webalkalmazás gyors és reszponzív működése.
+>
+> _Röviden_: Célunk, hogy az alkalmazásunk működése során semmilyen sebességi
+> valamint eszközkülönbségi tényező ne folyásolja be a felhasználói élményt.
+>
+> ### Kompatibilitás különböző böngészőkkel.
+>
+> _Röviden_: Célunk, hogy a felhasználó az általa preferált böngészőben tőlünk függetlenül is futtatni tudja
+> az alkalmazásunkat.
+
+### Törvényi előírások, szabványok
+
+- Adatvédelmi jogszabályok betartása.
+- GDPR követelmények teljesítése.
+
+## Funkcionális terv
+
+### Rendszerszereplők
+
+- Felhasználók: A rendszer végfelhasználói, akik használják az alkalmazást.
+
+### Rendszer használati esetek és lefutásaik
+
+#### Város keresése
+
+- A felhasználó megadja a keresett város nevét.
+
+- A rendszer lekéri a város időjárási adatait.
+
+- Az adatok megjelenítése a felhasználónak.
+
+### Határ osztályok
+
+- Felhasználói felület: A webes alkalmazás felhasználói felülete.
+
+- Backend API: Az időjárási adatok lekérdezéséért és feldolgozásáért felelős komponens.
+
+### Menühierarchia
