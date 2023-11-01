@@ -7,9 +7,10 @@ import { SimplePredictionComponent } from './simple-prediction/simple-prediction
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './simple-prediction/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 
 @NgModule({
-  declarations: [AppComponent, SimplePredictionComponent, CardComponent],
+  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
