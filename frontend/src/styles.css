@@ -231,6 +231,17 @@ footer p:not(:last-child)::after {
   }
 }
 
+@media screen and (min-width: 1450px) {
+  .main {
+    margin: 10px auto;
+  }
+  .pack {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .main {
     padding: 0;
