@@ -311,7 +311,9 @@ flowchart TD
 
 - Város előrejelzéses almenü:
 
-  - Időjárás előrejelzés kártyák 
+  - Időjárás előrejelzés kártyák
+
+![](../images/screen-plan-proj2.png)
 
 ## Rendszerarchitechtúra
 
@@ -340,10 +342,15 @@ Az alkalmazás a következő részekből fog állni:
 
 - Az alkalmazás hasonló módon az előzőhöz tartalmazni fog négy helyett öt dinamikusan megjelenő szépen animált kártya,
   melyek a következő kártyákat tartalmazzák:
+
   - A holnapi időjárás előrejelzését
+
   - Jelenlegi naptól 7 napra eső nap időjárás előrejelzését
+
   - Jelenlegi naptól 30 napra eső nap időjárás előrejelzését
+
   - Jelenlegi naptól 365 napra eső nap időjárás előrejelzését
+
   - Egyedi dátum input
 
 ## Tesztterv
