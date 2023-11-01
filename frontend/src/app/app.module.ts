@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SimplePredictionComponent } from './simple-prediction/simple-prediction.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SimplePredictionComponent
   ],
   imports: [
     BrowserModule,
