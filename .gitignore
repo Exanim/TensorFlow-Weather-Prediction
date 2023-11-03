@@ -1,2 +1,3 @@
 /model/raw_html/met_hu_data_*.html
 /model/csv_data/*
+/model/models/*.keras
