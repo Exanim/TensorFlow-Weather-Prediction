@@ -21,6 +21,14 @@ class WeatherPrediction:
         self.model_path = f'models/year_ignore_{city}_model.keras'
         self.loaded_model = tf.keras.models.load_model(self.model_path)
 
+    async def process_date(self, date):
+        new_data = np.array([[date.month, date.day]])
+        predictions = self.scaler.inverse_transform(self.loaded_model.predict(new_data))
+
+        temperature = logarithmic_warming_rate(date.year, predictions[0, 0])
+        rain = chaotic_randomizer.chaotic_random()
+
+        return [temperature, rain]
 
     async def predict_weather_async(self, start_date, end_date):
         pred_list = []
