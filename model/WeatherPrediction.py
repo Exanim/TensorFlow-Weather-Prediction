@@ -20,7 +20,22 @@ class WeatherPrediction:
         self.model_path = f'models/year_ignore_{city}_model.keras'
         self.loaded_model = tf.keras.models.load_model(self.model_path)
 
-    
+    def predict_weather(self, start_date, end_date):
+        current_date = start_date
+        delta = datetime.timedelta(days=1)
+        pred_list = []
+
+        while current_date <= end_date:
+            new_data = np.array([[current_date.month, current_date.day]])
+            predictions = self.scaler.inverse_transform(self.loaded_model.predict(new_data))
+
+            temperature = logarithmic_warming_rate(current_date.year, predictions[0, 0])
+            rain = chaotic_randomizer.chaotic_random()
+
+            pred_list.append([temperature, rain])
+
+            current_date += delta
+        return pred_list
 
 
 # Example usage:
