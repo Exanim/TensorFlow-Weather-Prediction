@@ -1,0 +1,22 @@
+body {
+  width: 100%;
+  min-width: 420px;
+  background: #252525;
+}
+
+body div.main {
+  width: auto;
+  min-height: 580px;
+  margin: 14vh auto 0 auto;
+  max-width: 1350px;
+  display: block;
+  background: linear-gradient(135deg, #167aff, #a901ff);
+  color: #fff;
+  border-radius: 20px;
+  padding: 35px 40px 35px 40px;
+  text-align: center;
+  animation-delay: 200ms;
+  animation-duration: 2s;
+  animation-name: fade;
+  animation-fill-mode: forwards;
+}
