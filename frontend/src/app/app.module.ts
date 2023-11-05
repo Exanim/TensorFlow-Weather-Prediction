@@ -8,9 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './simple-prediction/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
+import { CitiesComponent } from './advanced-prediction/cities/cities.component';
+import { CityComponent } from './advanced-prediction/cities/city/city.component';
 
 @NgModule({
-  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent],
+  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent, CitiesComponent, CityComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

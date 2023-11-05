@@ -1,0 +1,20 @@
+<div class="pack">
+  <div *ngFor="let city of cities" class="card">
+    <app-city [cityName]="city"></app-city>
+  </div>
+</div>
+
+<footer>
+  <p>Kapcsolat: info@weatherapp.com</p>
+  <p>© 2023 Weather App</p>
+  <p>
+    Weather data provided by
+    <a href="https://openweathermap.org/">OpenWeather</a>
+  </p>
+  <img
+    src="../assets/OpenWeather-Master-Logo RGB.png"
+    width="120"
+    height="68"
+    alt="OpenWeatherMapLogo"
+  />
+</footer>
