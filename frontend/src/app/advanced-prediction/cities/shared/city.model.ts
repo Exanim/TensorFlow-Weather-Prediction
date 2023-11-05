@@ -4,4 +4,5 @@ export interface City {
   temp: number;
   humidity: number;
   wind: number;
+  temperatureType: boolean;
 }
