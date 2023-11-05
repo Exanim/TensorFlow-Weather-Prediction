@@ -1,8 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { City } from './shared/city.model';
-import { DataStorageService } from './shared/data-storage.service';
-import { Coord } from './shared/get-all-request.model';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cities',
@@ -10,5 +6,5 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cities.component.css'],
 })
 export class CitiesComponent {
-
+  cities: string[] = ['Budapest', 'Pécs', 'Szeged', 'Nyíregyháza'];
 }

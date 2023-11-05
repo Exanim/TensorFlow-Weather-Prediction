@@ -1,8 +1,7 @@
 <div class="pack">
-  <div class="card"></div>
-</div>
-<div class="pack">
-  <div class="card"></div>
+  <div *ngFor="let city of cities" class="card">
+    <app-city [cityName]="city"></app-city>
+  </div>
 </div>
 
 <footer>

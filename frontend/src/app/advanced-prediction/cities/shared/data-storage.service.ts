@@ -35,7 +35,7 @@ export class DataStorageService {
   getCityInformationByGeoData(geoData: Coord): Observable<City> {
     return this.http2
       .get<WeatherAPIResponse>(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${geoData.lat}&lon=${geoData.lon}&appid=${environment.API_KEY}`
+        `http://api.openweathermap.org/data/2.5/weather?lat=${geoData.lat}&lon=${geoData.lon}&appid=${environment.API_KEY}&units=metric`
       )
       .pipe(
         map((response: WeatherAPIResponse) => {
@@ -44,7 +44,7 @@ export class DataStorageService {
             name: response.name,
             temp: response.main.temp,
             humidity: response.main.humidity,
-            wind: response.wind.speed,
+            wind: response.wind.speed * 3.6,
             temperatureType: false,
           };
           return cityInformation;

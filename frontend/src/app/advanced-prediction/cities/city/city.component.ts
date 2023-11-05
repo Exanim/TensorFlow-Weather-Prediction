@@ -10,7 +10,7 @@ import { Coord } from '../shared/get-all-request.model';
   styleUrls: ['./city.component.css'],
 })
 export class CityComponent implements OnInit {
-  @Input() city: City = {
+  city: City = {
     name: '',
     icon: '',
     temp: 0,
@@ -19,17 +19,21 @@ export class CityComponent implements OnInit {
     temperatureType: false,
   };
 
+  @Input() cityName = '';
+
   constructor(private http: DataStorageService) {}
 
   ngOnInit(): void {
+    this.city.name = this.cityName;
     this.subscriptionToCities = this.http
-      .getGeoLocationByCityName(this.city.name)
+      .getGeoLocationByCityName(this.cityName)
       .subscribe((response) => {
         this.geoData = response;
         this.http
           .getCityInformationByGeoData(this.geoData)
           .subscribe((response) => {
             console.log(response);
+            this.city = response;
           });
       });
   }
