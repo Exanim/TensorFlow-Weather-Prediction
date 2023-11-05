@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
-import { City } from './city.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CitiesService {
-
-  constructor() { }
-
-  cities: City[] = [];
+  constructor() {}
 }
