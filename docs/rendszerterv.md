@@ -257,6 +257,7 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
 
 - Adatvédelmi jogszabályok betartása.
 - GDPR követelmények teljesítése.
+- OpenWeatherMap API kötelező dokumentációs eljárása
 
 ## Funkcionális terv
 
