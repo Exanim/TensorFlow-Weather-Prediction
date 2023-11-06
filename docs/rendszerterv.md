@@ -183,6 +183,22 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
 
     - _Szereplők_: Frontend
 
+6. **Választható időjáráselőrejelzés**: A frontenden megjeleníteni két lehetséges időjáráselőrejelzési megoldást
+
+      - _Input_: Kiválasztás a welcome képernyőn
+
+      - _Output_: A megfelelő előrejelző képernyő elküldése
+
+      - _Szereplők_: Frontend
+  
+7. **Tensorflow kijelző megjelenítése**: A frontenden megjeleníteni a négy választható város jelenlegi időjárását
+
+     - _Input_: 4 város neve
+
+     - _Output_: A megfelelő városok jelenlegi adata
+
+     - _Szereplők_: Frontend, OpenWeatherMap API
+
 ## Követelmények
 
 ### Funkcionális követelmények
