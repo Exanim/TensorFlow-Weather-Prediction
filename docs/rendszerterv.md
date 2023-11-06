@@ -448,17 +448,18 @@ A backend API implementálása Python nyelven fog történni a Flask webes keret
 
 - Le kell tölteni a NodeJS-t: *https://nodejs.org/en*
 
-- Fel kell telepíteni az Angular CLI-t egy konzolparanccsal
-
-```bash
-npm install -g @angular/cli
-```
-
 - Le kell tölteni a projekt megfelelő mappáját
 
   *https://github.com/Exanim/TensorFlow-Weather-Prediction*
+  
 
-- Konzollal belenavigálva elindítható az alkalmazás 
+- Fel kell telepíteni a node modult és egyéb "dependency"-ket egy konzolparanccsal a projekt mappáján belül
+
+```bash
+npm install
+```
+
+- Konzollal elindítható az alkalmazás 
 
 ```bash
 npm start
