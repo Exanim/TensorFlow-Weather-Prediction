@@ -101,6 +101,14 @@ A webalkalmazás kártya alapú megjelenítésével a felhasználók gyorsan és
 
 3. Funkcionális specifikiáció megírása - **_2023. október 19._**
 
+4. Angular alapú frontend kezdete - **_2023. november 1._**
+
+5. Tensorflow alapú backend kezdete - **_2023. november 3._**
+
+6. Tensorflow alapú backend első verziójának kiadása - **_2023. november 3._**
+
+7. Angular alapú frontend első verziójának kiadása - **_2023. november 5._**
+
 ## Üzleti folyamatok modellje
 
 ### Üzleti szereplők
