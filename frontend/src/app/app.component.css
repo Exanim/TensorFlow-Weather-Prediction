@@ -1,12 +1,16 @@
 body {
   width: 100%;
+  height: 100%;
   min-width: 420px;
   background: #252525;
+  display: flex;
+  flex-direction: column;
 }
 
 body div.main {
+  flex: 1;
   width: auto;
-  min-height: 580px;
+  height: auto;
   margin: 14vh auto 0 auto;
   max-width: 1350px;
   display: block;
