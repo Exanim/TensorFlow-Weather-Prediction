@@ -10,9 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 import { CitiesComponent } from './advanced-prediction/cities/cities.component';
 import { CityComponent } from './advanced-prediction/cities/city/city.component';
+import { CitySelectionComponent } from './advanced-prediction/city-selection/city-selection.component';
+import { WeatherComponent } from './advanced-prediction/weather/weather.component';
 
 @NgModule({
-  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent, CitiesComponent, CityComponent],
+  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent, CitiesComponent, CityComponent, CitySelectionComponent, WeatherComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
