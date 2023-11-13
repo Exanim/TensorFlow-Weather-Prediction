@@ -9,7 +9,7 @@ if not os.path.exists("csv_data"):
 
 # data.append(["year", "month", "day", "temperature", "total_rainfall"])
 
-csv_file_path = os.path.join("csv_data", f"budapest_data.csv")
+csv_file_path = os.path.join("csv_data", f"szeged_data.csv")
 with open(csv_file_path, "w", newline="", encoding="utf-8") as csv_file:
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(["year", "month", "day", "temperature", "total_rainfall"])
