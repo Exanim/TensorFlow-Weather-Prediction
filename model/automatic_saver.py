@@ -1,35 +1,48 @@
 import os
-import requests
+import aiohttp
+import asyncio
 
 # Create a directory for the HTML files if it doesn't exist
 if not os.path.exists("raw_html"):
     os.makedirs("raw_html")
 
-# Define the base URL
-base_url = "https://www.met.hu/eghajlat/magyarorszag_eghajlata/150_eves_eghajlati_adatsorok/Budapest/adatok/napi_adatok/main.php?"
+base_url = "https://www.met.hu/eghajlat/magyarorszag_eghajlata/150_eves_eghajlati_adatsorok/Szeged/adatok/napi_adatok/main.php?"
 
-# Iterate through years (1870 to 2020)
-for year in range(1870, 2021):
-    # Iterate through months (01 to 12)
-    for month in range(1, 13):
-        # Create the full URL with the year and month parameters
-        url = f"{base_url}y={year}&m={month:02d}&ful=AKT_FUL#y{year}"
 
-        # Send a GET request to the URL
-        response = requests.get(url)
+async def fetch_and_save_html(session, year, month, max_retries=3):
+    url = f"{base_url}y={year}&m={month:02d}&ful=AKT_FUL#y{year}"
 
-        # Check if the request was successful (status code 200)
-        if response.status_code == 200:
-            # Get the content (HTML) from the response
-            html_content = response.text
+    for retry in range(max_retries):
+        try:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    html_content = await response.text()
 
-            # Specify the file path in the "raw_html" directory
-            file_path = os.path.join("raw_html", f"met_hu_data_{year}_{month:02d}.html")
+                    file_path = os.path.join("raw_html", f"met_hu_data_{year}_{month:02d}.html")
 
-            # Write the HTML content to the file
-            with open(file_path, "w", encoding="utf-8") as html_file:
-                html_file.write(html_content)
+                    with open(file_path, "w", encoding="utf-8") as html_file:
+                        html_file.write(html_content)
 
-            print(f"HTML content for year {year} and month {month:02d} saved to {file_path}")
-        else:
-            print(f"Failed to retrieve HTML for year {year} and month {month:02d}. Status code: {response.status_code}")
+                    print(f"HTML content for year {year} and month {month:02d} saved to {file_path}")
+                    return
+                elif response.status == 503 and retry < max_retries - 1:
+                    # Retry after a delay
+                    await asyncio.sleep(5)  # Adjust the delay time as needed
+                    continue
+                else:
+                    print(f"Failed to retrieve HTML for year {year} and month {month:02d}. Status code: {response.status}")
+                    return
+        except Exception as e:
+            print(f"Error during request for year {year} and month {month:02d}: {str(e)}")
+            return
+
+
+async def main():
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch_and_save_html(session, year, month) for year in range(1870, 2021) for month in range(1, 13)]
+        await asyncio.gather(*tasks)
+
+
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
