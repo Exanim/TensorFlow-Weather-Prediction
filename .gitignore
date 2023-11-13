@@ -1,3 +1,10 @@
 /model/raw_html/met_hu_data_*.html
 /model/csv_data/*
 /model/models/*.keras
+/.idea/.gitignore
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/TensorFlow-Weather-Prediction.iml
+/.idea/vcs.xml
+/model/__pycache__/csv_cleaner.cpython-39.pyc
