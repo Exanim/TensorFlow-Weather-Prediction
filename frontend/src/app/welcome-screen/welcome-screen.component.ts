@@ -13,6 +13,6 @@ export class WelcomeScreenComponent implements OnInit {
 
   onCardClicked(card: string) {
     if (card === 'basic') this.router.navigate(['/weather']);
-    else this.router.navigate(['/tensor']);
+    else this.router.navigate(['/city-selection']);
   }
 }
