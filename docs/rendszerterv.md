@@ -70,13 +70,13 @@ A webalkalmazás kártya alapú megjelenítésével a felhasználók gyorsan és
 
 - Rendszerterv megfogalmazása: **2023. október**
 
-- HTML és hozzá tartozó stíluslap elkészítése: TBA
+- HTML és hozzá tartozó stíluslap elkészítése: **2023. november 1.**
 
-- Frontend vezérlő elkészítése: TBA
+- Frontend vezérlő elkészítése: **2023. november 1.**
 
 - TensorFlow modell elkészítése: **2023. opktóber 26.**
 
-- Endpointok létrehozása: TBA
+- Endpointok létrehozása: **2023. november 13.**
 
 - Backend - Frontend kommunikáció implementálása: TBA
 
@@ -88,7 +88,7 @@ A webalkalmazás kártya alapú megjelenítésével a felhasználók gyorsan és
 | WebApp       | Frontend stílus    |     5     |      2:00      |       0:00        |         2:00         |
 |              | Frontend vezérlés  |     5     |     10:00      |       0:00        |        10:00         |
 |              | Frontend tesztelés |     5     |      2:00      |       0:00        |         2:00         |
-| API          | Adatok beolvasása  |     3     |      4:00      |       0:00        |         4:00         |
+| API          | Adatok beolvasása  |     3     |      4:00      |       0:30        |         3:30         |
 | Backend      | TensorFlow modell  |     0     |     20:00      |       10:00       |        10:00         |
 |              | Adatok elérése     |     2     |      8:00      |       0:00        |         8:00         |
 |              | Backend tesztelés  |     2     |      5:00      |       0:00        |         5:00         |
@@ -108,6 +108,8 @@ A webalkalmazás kártya alapú megjelenítésével a felhasználók gyorsan és
 6. Tensorflow alapú backend első verziójának kiadása - **_2023. november 3._**
 
 7. Angular alapú frontend első verziójának kiadása - **_2023. november 5._**
+
+8. Endpointok implementálásának kezdete - ***2023 november 13.***
 
 ## Üzleti folyamatok modellje
 
