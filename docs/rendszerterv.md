@@ -74,7 +74,7 @@ A webalkalmazás kártya alapú megjelenítésével a felhasználók gyorsan és
 
 - Frontend vezérlő elkészítése: **2023. november 1.**
 
-- TensorFlow modell elkészítése: **2023. opktóber 26.**
+- TensorFlow modell elkészítése: **2023. október 26.**
 
 - Endpointok létrehozása: **2023. november 13.**
 
