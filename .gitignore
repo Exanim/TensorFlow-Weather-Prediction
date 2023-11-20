@@ -1,5 +1,4 @@
 /model/raw_html/met_hu_data_*.html
-/model/csv_data/*
 /.idea/.gitignore
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/misc.xml
