@@ -1,6 +1,7 @@
 import os
 import asyncio
 import datetime
+import csv_cleaner
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -13,8 +14,7 @@ class WeatherPrediction:
     def __init__(self, city):
         self.city = city.lower()
         self.file_path = os.path.join('csv_data', f'{city}_data.csv')
-        self.df = pd.read_csv(self.file_path)
-        self.df.fillna(self.df.mean(), inplace=True)
+        self.df = csv_cleaner.replace_hiány_with_mean(os.path.join('csv_data', f'{city}_data.csv'))
         self.scaler = StandardScaler()
         self.df[['temperature', 'total_rainfall']] = self.scaler.fit_transform(
             self.df[['temperature', 'total_rainfall']])
@@ -49,10 +49,10 @@ class WeatherPrediction:
 
 # Example usage:
 if __name__ == "__main__":
-    city = "budapest"  # lowercase
+    city = "szeged"  # lowercase
     weather_predictor = WeatherPrediction(city)
-    start_date = datetime.date(2500, 11, 1)
-    end_date = datetime.date(2502, 1, 1)
+    start_date = datetime.date(2500, 1, 1)
+    end_date = datetime.date(2500, 2, 1)
 
     # Use async event loop
     loop = asyncio.get_event_loop()
