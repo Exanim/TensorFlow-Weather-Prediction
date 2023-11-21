@@ -49,7 +49,7 @@ class WeatherPrediction:
 
 # Example usage:
 if __name__ == "__main__":
-    city = "szeged"  # lowercase
+    city = "Budapest"
     weather_predictor = WeatherPrediction(city)
     start_date = datetime.date(2500, 1, 1)
     end_date = datetime.date(2500, 2, 1)
