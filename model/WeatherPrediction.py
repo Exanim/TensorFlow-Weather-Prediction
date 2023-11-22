@@ -71,9 +71,20 @@ class WeatherApi(BaseHTTPRequestHandler):
         parsed_path = urlparse(self.path)
         query_params = parse_qs(parsed_path.query)
 
-        if (query_params.get('city', [None])[0] is None or
-            query_params.get('city', [None])[0].lower() not in default_cities):
+        if query_params.get('city', [None])[0] is None:
             city = "budapest"
+        elif query_params.get('city', [None])[0].lower() not in default_cities:
+            self.send_response(404)
+            """
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            response_data = {
+                "city not found": query_params.get('city', [None])[0], # I leave this here, just in case
+            }
+            response_json = json.dumps(response_data)
+            self.wfile.write(bytes(response_json, "utf-8"))
+            """
+            return
         else:
             city = query_params.get('city', [None])[0]
 
