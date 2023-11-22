@@ -8,7 +8,6 @@ from urllib.parse import urlparse, parse_qs
 
 import csv_cleaner
 import numpy as np
-import pandas as pd
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
 from output_transform import chaotic_randomizer
@@ -90,7 +89,6 @@ class WeatherApi(BaseHTTPRequestHandler):
         self.wfile.write(bytes(response_json, "utf-8"))
 
 
-# Example usage:
 if __name__ == "__main__":
     # city = "Budapest"
     # weather_predictor = WeatherPrediction(city)
@@ -112,4 +110,3 @@ if __name__ == "__main__":
 
     webServer.server_close()
     print("Server stopped.")
-    # print(asyncio.run(get_weather_data()))
