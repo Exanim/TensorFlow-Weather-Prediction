@@ -57,9 +57,9 @@ class WeatherPrediction:
         return pred_list
 
 
-async def get_weather_data():
+async def get_weather_data(date: datetime):
     weather_predictor = WeatherPrediction("Budapest")
-    task = asyncio.create_task(weather_predictor.process_date(datetime.date.today()))
+    task = asyncio.create_task(weather_predictor.process_date(date))
     return await task
 
 
@@ -67,7 +67,14 @@ class WeatherApi(BaseHTTPRequestHandler):
     def do_GET(self):
         logging.info("GET STARTED")
 
-        data = asyncio.run(get_weather_data())
+        data = []
+        data.append(asyncio.run(get_weather_data(datetime.date.today())))
+        next_week = datetime.date(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day+7)
+        next_month = datetime.date(datetime.date.today().year, datetime.date.today().month+1, datetime.date.today().day)
+        next_year = datetime.date(datetime.date.today().year+1, datetime.date.today().month, datetime.date.today().day)
+        data.append(asyncio.run(get_weather_data(next_week)))
+        data.append(asyncio.run(get_weather_data(next_month)))
+        data.append(asyncio.run(get_weather_data(next_year)))
         print(data)
 
         """
@@ -83,8 +90,22 @@ class WeatherApi(BaseHTTPRequestHandler):
         self.end_headers()
 
         response_data = {
-            "temperature": data[0],
-            "humidity": data[1],
+            "today": {
+                "temperature": data[0][0],
+                "humidity": data[0][1],
+            },
+            "next_week": {
+                "temperature": data[1][0],
+                "humidity": data[1][1],
+            },
+            "next_month": {
+                "temperature": data[2][0],
+                "humidity": data[2][1],
+            },
+            "next_year": {
+                "temperature": data[3][0],
+                "humidity": data[3][1],
+            }
         }
 
         response_json = json.dumps(response_data)
