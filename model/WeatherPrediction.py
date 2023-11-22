@@ -4,7 +4,7 @@ import os
 import asyncio
 import datetime
 from http.server import BaseHTTPRequestHandler, HTTPServer
-# from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs
 
 import csv_cleaner
 import numpy as np
@@ -16,8 +16,8 @@ from output_transform.global_warming_rate import logarithmic_warming_rate
 
 hostname = "localhost"
 port = 8000
-
 title = "TensorFlow-Weather-API"
+default_cities =["budapest", "szeged", "nyiregyhaza", "sopron"]
 
 
 class WeatherPrediction:
@@ -57,8 +57,9 @@ class WeatherPrediction:
         return pred_list
 
 
-async def get_weather_data(date: datetime):
-    weather_predictor = WeatherPrediction("Budapest")
+async def get_weather_data(date: datetime, city):
+    city = city.lower()
+    weather_predictor = WeatherPrediction(city)
     task = asyncio.create_task(weather_predictor.process_date(date))
     return await task
 
@@ -67,29 +68,34 @@ class WeatherApi(BaseHTTPRequestHandler):
     def do_GET(self):
         logging.info("GET STARTED")
 
-        data = []
-        data.append(asyncio.run(get_weather_data(datetime.date.today())))
-        next_week = datetime.date(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day+7)
-        next_month = datetime.date(datetime.date.today().year, datetime.date.today().month+1, datetime.date.today().day)
-        next_year = datetime.date(datetime.date.today().year+1, datetime.date.today().month, datetime.date.today().day)
-        data.append(asyncio.run(get_weather_data(next_week)))
-        data.append(asyncio.run(get_weather_data(next_month)))
-        data.append(asyncio.run(get_weather_data(next_year)))
-        print(data)
-
-        """
         parsed_path = urlparse(self.path)
         query_params = parse_qs(parsed_path.query)
 
-        if not query_params.get('param1',[None])[0] is None:
-            foo = query_params.get('param1',[None])[0]
-        """
+        if (query_params.get('city', [None])[0] is None or
+            query_params.get('city', [None])[0].lower() not in default_cities):
+            city = "budapest"
+        else:
+            city = query_params.get('city', [None])[0]
+
+        data = []
+        data.append(asyncio.run(get_weather_data(datetime.date.today(), city)))
+        next_week = datetime.date(datetime.date.today().year, datetime.date.today().month,
+                                  datetime.date.today().day + 7)
+        next_month = datetime.date(datetime.date.today().year, datetime.date.today().month + 1,
+                                   datetime.date.today().day)
+        next_year = datetime.date(datetime.date.today().year + 1, datetime.date.today().month,
+                                  datetime.date.today().day)
+        data.append(asyncio.run(get_weather_data(next_week, city)))
+        data.append(asyncio.run(get_weather_data(next_month, city)))
+        data.append(asyncio.run(get_weather_data(next_year, city)))
+        print(data)
 
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
 
         response_data = {
+            "city": city,
             "today": {
                 "temperature": data[0][0],
                 "humidity": data[0][1],
