@@ -6,4 +6,6 @@
 /.idea/TensorFlow-Weather-Prediction.iml
 /.idea/vcs.xml
 /model/__pycache__/csv_cleaner.cpython-39.pyc
+/model/__pycache__/*
 /model/output_transform/__pycache__/*
+/.idea/copyright/profiles_settings.xml
