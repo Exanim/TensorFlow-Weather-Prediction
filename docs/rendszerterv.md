@@ -435,8 +435,6 @@ integrációs teszteket a rendszer egészének ellenőrzésére.
 
    - [Jetbrains PyCharm](https://www.jetbrains.com/pycharm)
 
-   - [Flask](https://flask.palletsprojects.com)
-
    - [Visual Studio Code](https://code.visualstudio.com)
 
    - [Paint.NET](https://getpaint.net)
@@ -473,6 +471,8 @@ A backend API implementálása Python nyelven fog történni a Flask webes keret
 
 ## Telepítési terv
 
+### Frontend telepítési terv:
+
 - Le kell tölteni a NodeJS-t: *https://nodejs.org/en*
 
 - Le kell tölteni a projekt megfelelő mappáját
@@ -497,3 +497,18 @@ npm start
   - [Google Chrome](https://www.google.com/chrome)
   - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
   - [Opera](https://www.opera.com)
+
+### Backend telepítési terv:
+
+- Le kell tölteni a [Pycharm](https://www.jetbrains.com/pycharm/)ot, a [Python 3.9](https://www.python.org/downloads/release/python-390/)
+-et és a [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)-t
+
+- A pycharmon belül benavigálva a projektbe futtatni kell a következő parancsot:
+
+```bash
+conda env create -f environment.yaml
+```
+
+- A szükséges dependency-k telepítése után a [WeactherPrediction.py](../model/WeatherPrediction.py)-t futtatva indítható
+a backend szerver
+- A szerver alapértelmezetten a [localhost:8000](localhost:8000)-en érhető el.
