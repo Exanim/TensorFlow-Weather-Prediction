@@ -3,21 +3,14 @@ import logging
 import os
 import asyncio
 import datetime
-from http.server import BaseHTTPRequestHandler, HTTPServer
-from urllib.parse import urlparse, parse_qs
 
-import csv_cleaner
 import numpy as np
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
-from output_transform import chaotic_randomizer
-from output_transform.global_warming_rate import logarithmic_warming_rate
 
-
-hostname = "localhost"
-port = 8000
-title = "TensorFlow-Weather-API"
-default_cities =["budapest", "szeged", "nyiregyhaza", "sopron"]
+from model import csv_cleaner
+from model.output_transform import chaotic_randomizer
+from model.output_transform.global_warming_rate import logarithmic_warming_rate
 
 
 class WeatherPrediction:
@@ -64,74 +57,7 @@ async def get_weather_data(date: datetime, city):
     return await task
 
 
-class WeatherApi(BaseHTTPRequestHandler):
-    def do_GET(self):
-        logging.info("GET STARTED")
-
-        parsed_path = urlparse(self.path)
-        query_params = parse_qs(parsed_path.query)
-
-        if query_params.get('city', [None])[0] is None:
-            city = "szeged"
-        elif query_params.get('city', [None])[0].lower() not in default_cities:
-            self.send_response(404)
-            """
-            self.send_header("Content-type", "application/json")
-            self.end_headers()
-            response_data = {
-                "city not found": query_params.get('city', [None])[0], # I leave this here, just in case
-            }
-            response_json = json.dumps(response_data)
-            self.wfile.write(bytes(response_json, "utf-8"))
-            """
-            return
-        else:
-            city = query_params.get('city', [None])[0]
-
-        data = []
-        today = datetime.date.today()
-        next_week = datetime.date.today() + datetime.timedelta(days=7)
-        next_month = datetime.date.today() + datetime.timedelta(days=30)
-        next_year = datetime.date.today() + datetime.timedelta(days=365)
-        # next_decade = datetime.date.today() + datetime.timedelta(days=365 * 10)
-
-        data.append(asyncio.run(get_weather_data(today, city)))
-        data.append(asyncio.run(get_weather_data(next_week, city)))
-        data.append(asyncio.run(get_weather_data(next_month, city)))
-        data.append(asyncio.run(get_weather_data(next_year, city)))
-
-        print(data)
-
-        self.send_response(200)
-        self.send_header("Content-type", "application/json")
-        self.end_headers()
-
-        response_data = {
-            "city": city,
-            "today": {
-                "temperature": data[0][0],
-                "humidity": data[0][1],
-            },
-            "next_week": {
-                "temperature": data[1][0],
-                "humidity": data[1][1],
-            },
-            "next_month": {
-                "temperature": data[2][0],
-                "humidity": data[2][1],
-            },
-            "next_year": {
-                "temperature": data[3][0],
-                "humidity": data[3][1],
-            }
-        }
-
-        response_json = json.dumps(response_data)
-        self.wfile.write(bytes(response_json, "utf-8"))
-
-
 if __name__ == "__main__":
-    """
     city = "Budapest"
     weather_predictor = WeatherPrediction(city)
     start_date = datetime.date(2500, 1, 1)
@@ -141,14 +67,3 @@ if __name__ == "__main__":
     prediction_list = loop.run_until_complete(weather_predictor.predict_weather_async(start_date, end_date))
     loop.close()
     print(prediction_list)
-    """
-    webServer = HTTPServer((hostname, port), WeatherApi)
-    print("Server started http://%s:%s" % (hostname, port))
-
-    try:
-        webServer.serve_forever()
-    except KeyboardInterrupt:
-        pass
-
-    webServer.server_close()
-    print("Server stopped.")
