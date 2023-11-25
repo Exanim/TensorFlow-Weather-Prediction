@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { DataStorageService } from '../weather/shared/data-storage.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-predicted-city',
@@ -8,9 +9,14 @@ import { DataStorageService } from '../weather/shared/data-storage.service';
 })
 export class PredictedCityComponent implements OnInit {
   private http = inject(DataStorageService);
+  private route = inject(ActivatedRoute);
+  city: string = '';
 
   ngOnInit(): void {
-    this.http.getTensorFlowData().subscribe((data) => {
+    this.route.params.subscribe((params) => {
+      this.city = params['city'];
+    });
+    this.http.getTensorFlowData(this.city).subscribe((data) => {
       console.log(data);
     });
   }
