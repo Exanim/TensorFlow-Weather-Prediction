@@ -28,6 +28,10 @@ export class PredictedCityComponent implements OnInit {
         .getTensorFlowData(this.city)
         .subscribe((data) => {
           this.daysData = data;
+          this.daysData.today.name = this.days[0];
+          this.daysData.next_week.name = this.days[1];
+          this.daysData.next_month.name = this.days[2];
+          this.daysData.next_year.name = this.days[3];
           console.log(this.daysData);
           this.isLoading = false;
         });

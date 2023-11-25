@@ -25,21 +25,25 @@ export interface CustomBackendData {
 export interface Today {
   temperature: number;
   humidity: number;
+  name?: string;
 }
 
 export interface NextWeek {
   temperature: number;
   humidity: number;
+  name?: string;
 }
 
 export interface NextMonth {
   temperature: number;
   humidity: number;
+  name?: string;
 }
 
 export interface NextYear {
   temperature: number;
   humidity: number;
+  name?: string;
 }
 
 export interface GeoAPIResponse {
