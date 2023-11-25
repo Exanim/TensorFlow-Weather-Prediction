@@ -1,6 +1,6 @@
 <div *ngIf="!isLoading" class="pack">
-  <div class="card">
-    <app-day></app-day>
+  <div *ngFor="let day of days" class="card">
+    <app-day [day]="day"></app-day>
   </div>
 </div>
 <div *ngIf="isLoading">

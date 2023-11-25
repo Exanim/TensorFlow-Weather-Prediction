@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-day',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./day.component.css'],
 })
 export class DayComponent implements OnInit {
-  city: { name: string } = { name: 'New York' };
+  @Input() day?: string;
   constructor() {}
   ngOnInit(): void {}
 }

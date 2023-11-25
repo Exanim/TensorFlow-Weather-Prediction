@@ -14,6 +14,7 @@ export class PredictedCityComponent implements OnInit {
   routeSubscription = new Subscription();
   dataSubscription = new Subscription();
   city?: string;
+  days = ['Ma', 'Jövőhét', 'Jövő hónap', 'Jövő év'];
   isLoading = true;
 
   ngOnInit(): void {
