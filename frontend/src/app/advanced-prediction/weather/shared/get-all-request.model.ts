@@ -15,6 +15,33 @@ export interface WeatherAPIResponse {
   cod: number;
 }
 
+export interface CustomBackendData {
+  today: Today;
+  next_week: NextWeek;
+  next_month: NextMonth;
+  next_year: NextYear;
+}
+
+export interface Today {
+  temperature: number;
+  humidity: number;
+}
+
+export interface NextWeek {
+  temperature: number;
+  humidity: number;
+}
+
+export interface NextMonth {
+  temperature: number;
+  humidity: number;
+}
+
+export interface NextYear {
+  temperature: number;
+  humidity: number;
+}
+
 export interface GeoAPIResponse {
   name: string;
   local_names: string[];
