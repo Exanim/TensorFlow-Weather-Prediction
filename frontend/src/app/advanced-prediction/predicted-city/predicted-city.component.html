@@ -1,6 +1,10 @@
 <div *ngIf="!isLoading" class="pack">
   <div *ngFor="let day of understandableCity?.day" class="card">
-    <app-day [day]="day.name"></app-day>
+    <app-day
+      [day]="day.name"
+      [temperature]="day.temperature"
+      [humidity]="day.humidity"
+    ></app-day>
   </div>
 </div>
 <div *ngIf="isLoading">
