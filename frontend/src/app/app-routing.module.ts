@@ -5,6 +5,7 @@ import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.componen
 import { CitySelectionComponent } from './advanced-prediction/city-selection/city-selection.component';
 import { WeatherComponent } from './advanced-prediction//weather/weather.component';
 import { CitiesComponent } from './advanced-prediction/cities/cities.component';
+import { PredictedCityComponent } from './advanced-prediction/predicted-city/predicted-city.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'city-selection', component: CitiesComponent },
   { path: 'weather/:city', component: WeatherComponent },
   { path: '', redirectTo: '/city-selection', pathMatch: 'full' },
+  { path: ':city', component: PredictedCityComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
