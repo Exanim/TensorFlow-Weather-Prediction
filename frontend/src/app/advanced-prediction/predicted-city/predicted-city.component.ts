@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { DataStorageService } from '../weather/shared/data-storage.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { CustomBackendData } from '../weather/shared/get-all-request.model';
 
 @Component({
   selector: 'app-predicted-city',
@@ -15,6 +16,7 @@ export class PredictedCityComponent implements OnInit {
   dataSubscription = new Subscription();
   city?: string;
   days = ['Ma', 'Jövőhét', 'Jövő hónap', 'Jövő év'];
+  daysData?: CustomBackendData;
   isLoading = true;
 
   ngOnInit(): void {
@@ -25,8 +27,9 @@ export class PredictedCityComponent implements OnInit {
       this.dataSubscription = this.http
         .getTensorFlowData(this.city)
         .subscribe((data) => {
+          this.daysData = data;
+          console.log(this.daysData);
           this.isLoading = false;
-          console.log(data);
         });
     }, 500);
   }
