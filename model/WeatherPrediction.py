@@ -1,5 +1,3 @@
-import json
-import logging
 import os
 import asyncio
 import datetime
@@ -14,14 +12,14 @@ from model.output_transform.global_warming_rate import logarithmic_warming_rate
 
 
 class WeatherPrediction:
-    def __init__(self, city):
-        self.city = city.lower()
-        self.file_path = os.path.join('csv_data', f'{city}_data.csv')
-        self.df = csv_cleaner.replace_hiány_with_mean(os.path.join('csv_data', f'{city}_data.csv'))
+    def __init__(self, city_name):
+        self.city = city_name.lower()
+        self.file_path = os.path.join('csv_data', f'{city_name}_data.csv')
+        self.df = csv_cleaner.replace_hiány_with_mean(os.path.join('csv_data', f'{city_name}_data.csv'))
         self.scaler = StandardScaler()
         self.df[['temperature', 'total_rainfall']] = self.scaler.fit_transform(
             self.df[['temperature', 'total_rainfall']])
-        self.model_path = f'models/year_ignore_{city}_model.keras'
+        self.model_path = f'models/year_ignore_{city_name}_model.keras'
         self.loaded_model = tf.keras.models.load_model(self.model_path)
 
     async def process_date(self, date):
