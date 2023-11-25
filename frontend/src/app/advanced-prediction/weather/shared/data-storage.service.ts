@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   Coord,
+  CustomBackendData,
   GeoAPIResponse,
   WeatherAPIResponse,
 } from './get-all-request.model';
@@ -15,6 +16,10 @@ import { City } from './city.model';
 })
 export class DataStorageService {
   constructor(private http2: HttpClient) {}
+
+  getTensorFlowData(): Observable<CustomBackendData> {
+    return this.http2.get<CustomBackendData>('http://localhost:8000');
+  }
 
   getGeoLocationByCityName(cityName: string): Observable<Coord> {
     return this.http2
