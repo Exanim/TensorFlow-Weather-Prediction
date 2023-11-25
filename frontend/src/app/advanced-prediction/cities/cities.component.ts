@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cities.component.css'],
 })
 export class CitiesComponent {
-  cities: string[] = ['Budapest', 'Pécs', 'Szeged', 'Nyíregyháza'];
+  cities: string[] = ['Budapest', 'Sopron', 'Szeged', 'Nyíregyháza'];
 }
