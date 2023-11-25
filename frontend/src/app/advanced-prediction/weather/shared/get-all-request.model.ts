@@ -15,6 +15,17 @@ export interface WeatherAPIResponse {
   cod: number;
 }
 
+export interface DayData {
+  cityName: string;
+  day: Day[];
+}
+
+export interface Day {
+  temperature: number;
+  humidity: number;
+  name?: string;
+}
+
 export interface CustomBackendData {
   today: Today;
   next_week: NextWeek;

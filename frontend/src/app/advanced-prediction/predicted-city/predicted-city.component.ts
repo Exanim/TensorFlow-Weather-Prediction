@@ -2,7 +2,10 @@ import { Component, OnInit, inject } from '@angular/core';
 import { DataStorageService } from '../weather/shared/data-storage.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CustomBackendData } from '../weather/shared/get-all-request.model';
+import {
+  CustomBackendData,
+  DayData,
+} from '../weather/shared/get-all-request.model';
 
 @Component({
   selector: 'app-predicted-city',
@@ -18,6 +21,7 @@ export class PredictedCityComponent implements OnInit {
   days = ['Ma', 'Jövőhét', 'Jövő hónap', 'Jövő év'];
   daysData?: CustomBackendData;
   isLoading = true;
+  understandableCity?: DayData;
 
   ngOnInit(): void {
     this.routeSubscription = this.route.params.subscribe((params) => {
@@ -32,7 +36,34 @@ export class PredictedCityComponent implements OnInit {
           this.daysData.next_week.name = this.days[1];
           this.daysData.next_month.name = this.days[2];
           this.daysData.next_year.name = this.days[3];
-          console.log(this.daysData);
+          if (this.city) {
+            this.understandableCity = {
+              cityName: this.city,
+              day: [
+                {
+                  temperature: this.daysData.today.temperature,
+                  humidity: this.daysData.today.humidity,
+                  name: this.daysData.today.name,
+                },
+                {
+                  temperature: this.daysData.next_week.temperature,
+                  humidity: this.daysData.next_week.humidity,
+                  name: this.daysData.next_week.name,
+                },
+                {
+                  temperature: this.daysData.next_month.temperature,
+                  humidity: this.daysData.next_month.humidity,
+                  name: this.daysData.next_month.name,
+                },
+                {
+                  temperature: this.daysData.next_year.temperature,
+                  humidity: this.daysData.next_year.humidity,
+                  name: this.daysData.next_year.name,
+                },
+              ],
+            };
+          }
+          console.log(this.understandableCity);
           this.isLoading = false;
         });
     }, 500);
