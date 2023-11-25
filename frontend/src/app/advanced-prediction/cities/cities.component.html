@@ -1,5 +1,5 @@
 <div class="pack">
-  <div *ngFor="let city of cities" class="card">
+  <div *ngFor="let city of cities" class="card" style="cursor: pointer;" routerLink="/{{city}}">
     <app-city [cityName]="city"></app-city>
   </div>
 </div>

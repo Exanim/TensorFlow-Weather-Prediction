@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeScreenComponent },
   { path: 'weather', component: SimplePredictionComponent },
-  { path: 'tensor', component: CitiesComponent},
-  { path: 'city-selection', component: CitySelectionComponent },
+  { path: 'tensor', component: CitiesComponent },
+  { path: 'city-selection', component: CitiesComponent },
   { path: 'weather/:city', component: WeatherComponent },
   { path: '', redirectTo: '/city-selection', pathMatch: 'full' },
 ];
