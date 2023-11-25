@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PredictedCityComponent implements OnInit {
   private http = inject(DataStorageService);
   private route = inject(ActivatedRoute);
-  city: string = '';
+  city?: string;
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {

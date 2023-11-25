@@ -17,7 +17,7 @@ import { City } from './city.model';
 export class DataStorageService {
   constructor(private http2: HttpClient) {}
 
-  getTensorFlowData(cityName: string): Observable<CustomBackendData> {
+  getTensorFlowData(cityName?: string): Observable<CustomBackendData> {
     return this.http2.get<CustomBackendData>(
       'http://localhost:8000/' + cityName
     );
