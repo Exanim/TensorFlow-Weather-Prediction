@@ -72,7 +72,7 @@ class WeatherApi(BaseHTTPRequestHandler):
         query_params = parse_qs(parsed_path.query)
 
         if query_params.get('city', [None])[0] is None:
-            city = "budapest"
+            city = "szeged"
         elif query_params.get('city', [None])[0].lower() not in default_cities:
             self.send_response(404)
             """
@@ -89,16 +89,17 @@ class WeatherApi(BaseHTTPRequestHandler):
             city = query_params.get('city', [None])[0]
 
         data = []
-        data.append(asyncio.run(get_weather_data(datetime.date.today(), city)))
-        next_week = datetime.date(datetime.date.today().year, datetime.date.today().month,
-                                  datetime.date.today().day + 7)
-        next_month = datetime.date(datetime.date.today().year, datetime.date.today().month + 1,
-                                   datetime.date.today().day)
-        next_year = datetime.date(datetime.date.today().year + 1, datetime.date.today().month,
-                                  datetime.date.today().day)
+        today = datetime.date.today()
+        next_week = datetime.date.today() + datetime.timedelta(days=7)
+        next_month = datetime.date.today() + datetime.timedelta(days=30)
+        next_year = datetime.date.today() + datetime.timedelta(days=365)
+        # next_decade = datetime.date.today() + datetime.timedelta(days=365 * 10)
+
+        data.append(asyncio.run(get_weather_data(today, city)))
         data.append(asyncio.run(get_weather_data(next_week, city)))
         data.append(asyncio.run(get_weather_data(next_month, city)))
         data.append(asyncio.run(get_weather_data(next_year, city)))
+
         print(data)
 
         self.send_response(200)
