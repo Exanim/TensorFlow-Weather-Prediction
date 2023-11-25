@@ -14,9 +14,10 @@ import { CitySelectionComponent } from './advanced-prediction/city-selection/cit
 import { WeatherComponent } from './advanced-prediction/weather/weather.component';
 import { PredictedCityComponent } from './advanced-prediction/predicted-city/predicted-city.component';
 import { DayComponent } from './advanced-prediction/predicted-city/day/day.component';
+import { LoadingDannyComponent } from './loading-danny/loading-danny.component';
 
 @NgModule({
-  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent, CitiesComponent, CityComponent, CitySelectionComponent, WeatherComponent, PredictedCityComponent, DayComponent],
+  declarations: [AppComponent, SimplePredictionComponent, CardComponent, WelcomeScreenComponent, CitiesComponent, CityComponent, CitySelectionComponent, WeatherComponent, PredictedCityComponent, DayComponent, LoadingDannyComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

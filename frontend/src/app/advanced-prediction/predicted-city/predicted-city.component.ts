@@ -11,6 +11,7 @@ export class PredictedCityComponent implements OnInit {
   private http = inject(DataStorageService);
   private route = inject(ActivatedRoute);
   city?: string;
+  isLoading = true;
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -18,6 +19,7 @@ export class PredictedCityComponent implements OnInit {
     });
     this.http.getTensorFlowData(this.city).subscribe((data) => {
       console.log(data);
+      this.isLoading = false;
     });
   }
 }

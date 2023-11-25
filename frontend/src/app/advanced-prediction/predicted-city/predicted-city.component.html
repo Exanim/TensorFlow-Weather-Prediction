@@ -1,5 +1,8 @@
-<div class="pack">
+<div *ngIf="!isLoading" class="pack">
   <div class="card">
-    MEGMONDTAM
+    <app-day></app-day>
   </div>
+</div>
+<div *ngIf="isLoading">
+
 </div>
