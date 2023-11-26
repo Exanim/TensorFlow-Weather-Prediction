@@ -14,13 +14,11 @@ default_cities = ["budapest", "szeged", "nyiregyhaza", "sopron"]
 
 class WeatherApi(BaseHTTPRequestHandler):
 
+
     def do_GET(self):
+        logging.info("GET STARTED")
 
-        path = self.path
-        endpoint_name = path.strip('/').replace('/', '_')
-        method_name = f'do_GET_{endpoint_name}'
-
-        if path == "/":
+        if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
@@ -28,36 +26,11 @@ class WeatherApi(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(response).encode())
             return
 
-
-        parsed_path = urlparse(self.path)
-        query_params = parse_qs(parsed_path.query)
-        city = query_params.get('city', default_cities)[0].lower()
-
+        city = self.path.split('/')[-1]
         if city not in default_cities:
             self.send_response(404)
             return
-        else:
-            self.do_GET_city(city)
-
-        if hasattr(self, method_name):
-            getattr(self, method_name)()
-        else:
-            # Handle unknown paths with a 404 response
-            self.send_response(404)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write("Not Found".encode())
-
-    def do_GET_forecast(self):
-        # Custom endpoint for the path "/forecast"
-        self.send_response(200)
-        self.send_header("Content-type", "application/json")
-        self.end_headers()
-        response = {"message": "Weather forecast for the next week"}
-        self.wfile.write(json.dumps(response).encode())
-
-    def do_GET_city(self, city):
-        logging.info("GET STARTED")
+        print(city)
 
         data = []
         today = datetime.date.today()
@@ -73,6 +46,10 @@ class WeatherApi(BaseHTTPRequestHandler):
 
         print(data)
 
+        self.send_header("Access-Control-Allow-Origin", "http://localhost:4200")
+        self.send_header("Access-Control-Allow-Methods", "GET")
+        self.send_header("Access-Control-Allow-Headers", "Content-type")
+
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
@@ -81,19 +58,19 @@ class WeatherApi(BaseHTTPRequestHandler):
             "city": city,
             "today": {
                 "temperature": data[0][0],
-                "total_rain": data[0][1],
+                "humidity": data[0][1],
             },
             "next_week": {
                 "temperature": data[1][0],
-                "total_rain": data[1][1],
+                "humidity": data[1][1],
             },
             "next_month": {
                 "temperature": data[2][0],
-                "total_rain": data[2][1],
+                "humidity": data[2][1],
             },
             "next_year": {
                 "temperature": data[3][0],
-                "total_rain": data[3][1],
+                "humidity": data[3][1],
             }
         }
 
@@ -102,17 +79,6 @@ class WeatherApi(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    """
-    city = "Budapest"
-    weather_predictor = WeatherPrediction(city)
-    start_date = datetime.date(2500, 1, 1)
-    end_date = datetime.date(2500, 1, 1)
-
-    loop = asyncio.get_event_loop()
-    prediction_list = loop.run_until_complete(weather_predictor.predict_weather_async(start_date, end_date))
-    loop.close()
-    print(prediction_list)
-    """
     webServer = HTTPServer((hostname, port), WeatherApi)
     print("Server started http://%s:%s" % (hostname, port))
 
