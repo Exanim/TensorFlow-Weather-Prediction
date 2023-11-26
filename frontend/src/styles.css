@@ -134,21 +134,14 @@ input[type="checkbox"]:checked + .slider:before {
   transition: 0.3s;
 }
 
-.weather-icon {
+.card .card-icon {
   width: 110px;
   margin-top: 30px;
 }
 
-.day {
-  font-size: 60px;
-  font-weight: 500;
-  margin-top: 20px;
-  text-align: center;
-}
-
 .pack {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   flex-direction: row;
@@ -186,11 +179,14 @@ input[type="checkbox"]:checked + .slider:before {
 }
 
 footer {
+  display: block;
   position: fixed;
   bottom: 0;
+  right: 0;
   width: 100%;
   padding: 10px 0;
   text-align: center;
+  justify-content: center;
 }
 
 footer p {
@@ -205,6 +201,12 @@ footer p:not(:last-child)::after {
   content: " | ";
   margin: 0 5px;
   color: #333;
+}
+
+footer img {
+  height: 26px;
+  width: auto;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 992px) {
