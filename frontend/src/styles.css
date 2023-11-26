@@ -186,12 +186,14 @@ input[type="checkbox"]:checked + .slider:before {
 }
 
 footer {
+  display: block;
   position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
   padding: 10px 0;
   text-align: center;
+  justify-content: center;
 }
 
 footer p {
@@ -206,6 +208,12 @@ footer p:not(:last-child)::after {
   content: " | ";
   margin: 0 5px;
   color: #333;
+}
+
+footer img {
+  height: 26px;
+  width: auto;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 992px) {
