@@ -1,0 +1,14 @@
+.title{
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.card-icon{
+    margin: 16px 0 10px 0;
+}
+
+.details{
+    margin-top: 40px;
+}
