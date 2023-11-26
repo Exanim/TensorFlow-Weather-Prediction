@@ -188,6 +188,7 @@ input[type="checkbox"]:checked + .slider:before {
 footer {
   position: fixed;
   bottom: 0;
+  right: 0;
   width: 100%;
   padding: 10px 0;
   text-align: center;
