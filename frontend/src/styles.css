@@ -141,7 +141,7 @@ input[type="checkbox"]:checked + .slider:before {
 
 .pack {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   flex-direction: row;
