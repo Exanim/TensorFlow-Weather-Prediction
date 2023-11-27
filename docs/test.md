@@ -98,11 +98,3 @@
 | 63 | 2023-11-27 | 'should have an increased value after the year 1981'                                      |   ✓    |
 | 64 | 2023-11-27 | 'should return the unchanged value before the year 1981'                                  |   ✓    |
 | 65 | 2023-11-27 | 'should return the unchanged value at exactly the year 1981'                              |   ✓    |
-
-
-| ID |   Dátum    | Leírás                                                                                    | Passed |
-|:---|:----------:|-------------------------------------------------------------------------------------------|:------:|
-| 66 | 2023-11-27 | 'should have an .details tag with .col tag, div element and p element'                    |   ✓    |
-| 67 | 2023-11-27 | 'should have an .details tag with .col tag, div element and .wind'                        |   ✓    |
-| 68 | 2023-11-27 | 'should have an .details tag with .col tag, div element and p element with "0%"'          |   ✓    |
-| 69 | 2023-11-27 | 'should have an .details tag with .col tag, div element and p element with "Páratartalom" |   ✓    |
