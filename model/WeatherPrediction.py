@@ -15,7 +15,7 @@ class WeatherPrediction:
     def __init__(self, city_name):
         self.city = city_name.lower()
         self.file_path = os.path.join('csv_data', f'{city_name}_data.csv')
-        self.df = csv_cleaner.replace_hiány_with_mean(os.path.join('csv_data', f'{city_name}_data.csv'))
+        self.df = csv_cleaner.replace_missing_values(os.path.join('csv_data', f'{city_name}_data.csv'))
         self.scaler = StandardScaler()
         self.df[['temperature', 'total_rainfall']] = self.scaler.fit_transform(
             self.df[['temperature', 'total_rainfall']])

@@ -6,14 +6,14 @@ import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-from model.csv_cleaner import replace_hiány_with_mean
+from model.csv_cleaner import replace_missing_values
 from model.output_transform import chaotic_randomizer
 from model.output_transform.global_warming_rate import logarithmic_warming_rate
 
 file_path = os.path.join('../csv_data', 'szeged_data.csv')
 df = pd.read_csv(file_path)
 
-df_replaced = replace_hiány_with_mean(file_path)
+df_replaced = replace_missing_values(file_path)
 df = df_replaced
 
 scaler = StandardScaler()
