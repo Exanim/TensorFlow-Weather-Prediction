@@ -1,6 +1,7 @@
 # Test Log
 
 ## Unit tests:
+#### contributors: Balázs
 
 | ID |   Dátum    | Leírás                                                                                    | Várt  | Kapott |
 |:---|:----------:|-------------------------------------------------------------------------------------------|:-----:|:------:|
@@ -29,6 +30,7 @@
 | 23 | 2023-11-26 | 'should have a body element with footer and img inside' teszt                             | Siker | Siker  |
 
 ## Responsivity tests
+#### contributors: Erik, Martin
 
 | ID |   Dátum    | Leírás                                              | Várt  | Kapott |
 |:---|:----------:|-----------------------------------------------------|:-----:|:------:|
@@ -50,6 +52,7 @@
 | 39 | 2023-11-26 | Érintőképernyő kezelés tesztje                      | Siker | Siker  |
 
 ## Unit tests of components
+#### contributors: Erik, Martin
 
 | ID |   Dátum    | Leírás                                                                                   | Várt  | Kapott |
 |:---|:----------:|------------------------------------------------------------------------------------------|:-----:|:------:|
@@ -71,6 +74,7 @@
 
 
 ## Unit tests of python functions
+#### contributors: Simon
 
 ### csv_cleaner.py
 
