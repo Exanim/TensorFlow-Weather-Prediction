@@ -12,8 +12,15 @@ title = "TensorFlow-Weather-API"
 default_cities = ["budapest", "szeged", "nyiregyhaza", "sopron"]
 
 
-class WeatherApi(BaseHTTPRequestHandler):
+def city_in_default_cities(city):
+    return city in default_cities
 
+
+def get_last_path_element(path):
+    return path.split('/')[-1]
+
+
+class WeatherApi(BaseHTTPRequestHandler):
 
     def do_GET(self):
         logging.info("GET STARTED")
@@ -26,8 +33,8 @@ class WeatherApi(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(response).encode())
             return
 
-        city = self.path.split('/')[-1]
-        if city not in default_cities:
+        city = get_last_path_element(self.path)
+        if not city_in_default_cities(city):
             self.send_response(404)
             return
         print(city)
