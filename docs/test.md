@@ -68,3 +68,41 @@
 | 52 | 2023-11-26 | 'should have an .details tag with .col tag, div element and .wind'                         | Siker | Siker  |
 | 53 | 2023-11-26 | 'should have an .details tag with .col tag, div element and p element with "0%"'           | Siker | Siker  |
 | 54 | 2023-11-26 | 'should have an .details tag with .col tag, div element and p element with "Páratartalom"  | Siker | Siker  |
+
+
+## Unit tests of python functions
+
+### csv_cleaner.py
+
+| ID |   Dátum    | Leírás                                                                                    | Passed |
+|:---|:----------:|:-----------------------------------------------------------------------------------------:|:------:|
+| 55 | 2023-11-27 | 'The values replaced should only be valid values'                                         |   ✓    |
+| 56 | 2023-11-27 | 'Every instance of hiany have to be replaced'                                             |   ✓    |
+| 57 | 2023-11-27 | 'The replaced values should be numeric'                                                   |   ✓    |
+
+### chaotic_randomizer.py
+
+| ID |   Dátum    | Leírás                                                                                    | Passed |
+|:---|:----------:|-------------------------------------------------------------------------------------------|:------:|
+| 58 | 2023-11-27 | 'should produce output type of float or int'                                              |   ✓    |
+| 59 | 2023-11-27 | 'should have an output range of \[0.0, 25.0\]'                                            |   ✓    |
+| 60 | 2023-11-27 | 'should have an upper bound of 25.0'                                                      |   ✓    |
+| 61 | 2023-11-27 | 'should have a lower bound of 0.0'                                                        |   ✓    |
+
+
+### global_warming_rate.py
+
+| ID |   Dátum    | Leírás                                                                                    | Passed |
+|:---|:----------:|-------------------------------------------------------------------------------------------|:------:|
+| 62 | 2023-11-27 | 'should have an ouput type of float'                                                      |   ✓    |
+| 63 | 2023-11-27 | 'should have an increased value after the year 1981'                                      |   ✓    |
+| 64 | 2023-11-27 | 'should return the unchanged value before the year 1981'                                  |   ✓    |
+| 65 | 2023-11-27 | 'should return the unchanged value at exactly the year 1981'                              |   ✓    |
+
+
+| ID |   Dátum    | Leírás                                                                                    | Passed |
+|:---|:----------:|-------------------------------------------------------------------------------------------|:------:|
+| 66 | 2023-11-27 | 'should have an .details tag with .col tag, div element and p element'                    |   ✓    |
+| 67 | 2023-11-27 | 'should have an .details tag with .col tag, div element and .wind'                        |   ✓    |
+| 68 | 2023-11-27 | 'should have an .details tag with .col tag, div element and p element with "0%"'          |   ✓    |
+| 69 | 2023-11-27 | 'should have an .details tag with .col tag, div element and p element with "Páratartalom" |   ✓    |

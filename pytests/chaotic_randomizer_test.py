@@ -13,13 +13,11 @@ class TestChaoticRandom(unittest.TestCase):
         self.assertTrue(0.0 <= result <= 25.0, "Output should be in the range [0.0, 25.0]")
 
     def test_upper_bound(self):
-        # Test upper bound to ensure that the function can handle repeated calls without errors
         for _ in range(1000):
             result = chaotic_random()
             self.assertTrue(0.0 <= result <= 25.0, "Output should be in the range [0.0, 25.0]")
 
     def test_lower_bound(self):
-        # Test lower bound to ensure that the function can handle repeated calls without errors
         for _ in range(1000):
             result = chaotic_random()
             self.assertTrue(isinstance(result, (float, int)), "Output should be of type float or int")
