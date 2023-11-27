@@ -51,50 +51,69 @@
 
 ## Unit tests of components
 
-| ID |   Dátum    | Leírás                                                                                     | Várt  | Kapott |
-|:---|:----------:|--------------------------------------------------------------------------------------------|:-----:|:------:|
-| 40 | 2023-11-26 | 'should create the app'                                                                    | Siker | Siker  |
-| 41 | 2023-11-26 | 'should have a definition of card'                                                         | Siker | Siker  |
-| 42 | 2023-11-26 | 'should have .day class'                                                                   | Siker | Siker  |
-| 43 | 2023-11-26 | 'should have an img tag'                                                                   | Siker | Siker  |
-| 44 | 2023-11-26 | 'should have an .temp tag'                                                                 | Siker | Siker  |
-| 45 | 2023-11-26 | 'should have an .details tag'                                                              | Siker | Siker  |
-| 46 | 2023-11-26 | 'should have an .details .col tag'                                                         | Siker | Siker  |
-| 47 | 2023-11-26 | 'should have an .details tag with .col tag and div element'                                | Siker | Siker  |
-| 48 | 2023-11-26 | 'should have an .details tag with .col tag and div element and svg element'                | Siker | Siker  |
-| 49 | 2023-11-26 | 'should have an .details tag with .col tag, div element, svg element and path element'     | Siker | Siker  |
-| 50 | 2023-11-26 | 'should have an .details tag with .col tag, div element and .humidity'                     | Siker | Siker  |
-| 51 | 2023-11-26 | 'should have an .details tag with .col tag, div element and p element'                     | Siker | Siker  |
-| 52 | 2023-11-26 | 'should have an .details tag with .col tag, div element and .wind'                         | Siker | Siker  |
-| 53 | 2023-11-26 | 'should have an .details tag with .col tag, div element and p element with "0%"'           | Siker | Siker  |
-| 54 | 2023-11-26 | 'should have an .details tag with .col tag, div element and p element with "Páratartalom"  | Siker | Siker  |
+| ID |   Dátum    | Leírás                                                                                   | Várt  | Kapott |
+|:---|:----------:|------------------------------------------------------------------------------------------|:-----:|:------:|
+| 40 | 2023-11-26 | should create the app                                                                    | Siker | Siker  |
+| 41 | 2023-11-26 | should have a definition of card                                                         | Siker | Siker  |
+| 42 | 2023-11-26 | should have .day class                                                                   | Siker | Siker  |
+| 43 | 2023-11-26 | should have an img tag                                                                   | Siker | Siker  |
+| 44 | 2023-11-26 | should have an .temp tag                                                                 | Siker | Siker  |
+| 45 | 2023-11-26 | should have an .details tag                                                              | Siker | Siker  |
+| 46 | 2023-11-26 | should have an .details .col tag                                                         | Siker | Siker  |
+| 47 | 2023-11-26 | should have an .details tag with .col tag and div element                                | Siker | Siker  |
+| 48 | 2023-11-26 | should have an .details tag with .col tag and div element and svg element                | Siker | Siker  |
+| 49 | 2023-11-26 | should have an .details tag with .col tag, div element, svg element and path element     | Siker | Siker  |
+| 50 | 2023-11-26 | should have an .details tag with .col tag, div element and .humidity                     | Siker | Siker  |
+| 51 | 2023-11-26 | should have an .details tag with .col tag, div element and p element                     | Siker | Siker  |
+| 52 | 2023-11-26 | should have an .details tag with .col tag, div element and .wind                         | Siker | Siker  |
+| 53 | 2023-11-26 | should have an .details tag with .col tag, div element and p element with "0%"           | Siker | Siker  |
+| 54 | 2023-11-26 | should have an .details tag with .col tag, div element and p element with "Páratartalom" | Siker | Siker  |
 
 
 ## Unit tests of python functions
 
 ### csv_cleaner.py
 
-| ID |   Dátum    | Leírás                                                                                    | Passed |
-|:---|:----------:|:-----------------------------------------------------------------------------------------:|:------:|
-| 55 | 2023-11-27 | 'The values replaced should only be valid values'                                         |   ✓    |
-| 56 | 2023-11-27 | 'Every instance of hiany have to be replaced'                                             |   ✓    |
-| 57 | 2023-11-27 | 'The replaced values should be numeric'                                                   |   ✓    |
+| ID |   Dátum    | Leírás                                                           | Passed |
+|:---|:----------:|:-----------------------------------------------------------------|:------:|
+| 55 | 2023-11-27 | The values replaced should only be valid values                  |   ✓    |
+| 56 | 2023-11-27 | Every instance of hiany have to be replaced                      |   ✓    |
+| 57 | 2023-11-27 | The replaced values should be numeric                            |   ✓    |
 
 ### chaotic_randomizer.py
 
-| ID |   Dátum    | Leírás                                                                                    | Passed |
-|:---|:----------:|-------------------------------------------------------------------------------------------|:------:|
-| 58 | 2023-11-27 | 'should produce output type of float or int'                                              |   ✓    |
-| 59 | 2023-11-27 | 'should have an output range of \[0.0, 25.0\]'                                            |   ✓    |
-| 60 | 2023-11-27 | 'should have an upper bound of 25.0'                                                      |   ✓    |
-| 61 | 2023-11-27 | 'should have a lower bound of 0.0'                                                        |   ✓    |
+| ID |   Dátum    | Leírás                                                           | Passed |
+|:---|:----------:|------------------------------------------------------------------|:------:|
+| 58 | 2023-11-27 | should produce output type of float or int                       |   ✓    |
+| 59 | 2023-11-27 | should have an output range of \[0.0, 25.0\]                     |   ✓    |
+| 60 | 2023-11-27 | should have an upper bound of 25.0                               |   ✓    |
+| 61 | 2023-11-27 | should have a lower bound of 0.0                                 |   ✓    |
 
 
 ### global_warming_rate.py
 
-| ID |   Dátum    | Leírás                                                                                    | Passed |
-|:---|:----------:|-------------------------------------------------------------------------------------------|:------:|
-| 62 | 2023-11-27 | 'should have an ouput type of float'                                                      |   ✓    |
-| 63 | 2023-11-27 | 'should have an increased value after the year 1981'                                      |   ✓    |
-| 64 | 2023-11-27 | 'should return the unchanged value before the year 1981'                                  |   ✓    |
-| 65 | 2023-11-27 | 'should return the unchanged value at exactly the year 1981'                              |   ✓    |
+| ID |   Dátum    | Leírás                                                           | Passed |
+|:---|:----------:|------------------------------------------------------------------|:------:|
+| 62 | 2023-11-27 | should have an ouput type of float                               |   ✓    |
+| 63 | 2023-11-27 | should have an increased value after the year 1981               |   ✓    |
+| 64 | 2023-11-27 | should return the unchanged value before the year 1981           |   ✓    |
+| 65 | 2023-11-27 | should return the unchanged value at exactly the year 1981       |   ✓    |
+
+### city validator function
+
+
+| ID |   Dátum    | Leírás                                                           | Passed |
+|:---|:----------:|------------------------------------------------------------------|:------:|
+| 66 | 2023-11-27 | should return true in case of budapest                           |   ✓    |
+| 67 | 2023-11-27 | should return false in case of debrecen                          |   ✓    |
+| 68 | 2023-11-27 | should return false in case of Munic                             |   ✓    |
+| 69 | 2023-11-27 | should return return false in case of empty string               |   ✓    |
+
+### path parser function
+
+| ID |   Dátum    | Leírás                                                           | Passed |
+|:---|:----------:|------------------------------------------------------------------|:------:|
+| 66 | 2023-11-27 | should return budapest in case of "localhost:8000/budapest"      |   ✓    |
+| 67 | 2023-11-27 | should return sopron in case of localhost:8000/sopron            |   ✓    |
+| 68 | 2023-11-27 | should return path string in case of ".../some/other/path"       |   ✓    |
+| 69 | 2023-11-27 | should return empty string in case of ""                         |   ✓    |
