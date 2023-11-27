@@ -1,0 +1,20 @@
+.day{
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.temp{
+    margin-top: 38px;
+}
+
+.details{
+    margin-top: 40px;
+}
+
+.col{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
