@@ -30,7 +30,7 @@
 | 23 | 2023-11-26 | 'should have a body element with footer and img inside' teszt                             | Siker | Siker  |
 
 ## Responsivity tests
-#### contributors: Erik, Martin
+#### contributors: Erik
 
 | ID |   Dátum    | Leírás                                              | Várt  | Kapott |
 |:---|:----------:|-----------------------------------------------------|:-----:|:------:|
@@ -52,7 +52,7 @@
 | 39 | 2023-11-26 | Érintőképernyő kezelés tesztje                      | Siker | Siker  |
 
 ## Unit tests of components
-#### contributors: Erik, Martin
+#### contributors: Martin
 
 | ID |   Dátum    | Leírás                                                                                   | Várt  | Kapott |
 |:---|:----------:|------------------------------------------------------------------------------------------|:-----:|:------:|
