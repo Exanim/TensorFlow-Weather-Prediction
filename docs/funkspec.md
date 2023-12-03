@@ -146,6 +146,14 @@ majd kiválaszthatja, hogy annak a városnak mely adatára kíváncsi.
 
 - Funkció létrehozása a kedvenc helyek időjárásának követésére és tárolására, amely révén a felhasználóknak képességük lesz kiválasztani, rögzíteni és nyomon követni a saját kedvenc helyeiket. Ez magába foglalja otthonukat, munkahelyüket vagy bármilyen más várost, amelyre kíváncsiak az időjárási viszonyok tekintetében. A rendszernek lehetővé kell tennie, hogy a felhasználók könnyedén hozzáférjenek ezekhez az elmentett helyekhez, és az aktuális időjárási információkat személyre szabottan megtekinthessék.
 
+- Egy egységes navigációs sáv létrehozása, amely az alkalmazás felső részén helyezkedik el, és egységes hozzáférést biztosít a főbb funkciókhoz. A navigációs sáv tartalmazza az alábbi opciókat:
+ 1. Áttekintés: Az aktuális időjárási helyzet gyors áttekintése.
+ 2. Riasztások: Az aktuális időjárási riasztások és figyelmeztetések megtekintése.
+ 3. Kedvencek: A felhasználók által mentett kedvenc helyek időjárásának gyors elérése.
+ 4. Beállítások: A felhasználói beállítások és testreszabási lehetőségek elérése.
+ 5. Segítség: Az alkalmazás használatával kapcsolatos segítség és információk megtekintése.
+ 6. Visszajelzés: A felhasználói visszajelzések és értékelések beküldése az alkalmazás fejlesztéséhez.
+
 ### Forgatókönyv
 
 1. Az alkalmazást a felhasználó megnyitja, majd rögtön elé tárul a felület, mely tartalmaz egy keresősort,

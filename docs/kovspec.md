@@ -76,6 +76,8 @@ felhasználók kezdőképernyőjén.
 
 - Funkció hozzáadása, amely lehetővé teszi a felhasználók számára, hogy követhessék és tárolhassák kedvenc helyeik időjárását. Amely lehetővé teszi számukra, hogy könnyen ellenőrizzék a kiválasztott helyek aktuális időjárását.
 
+- Az alkalmazás tetején található navigációs sáv hozzáadása, amely segít a felhasználóknak könnyen átlátni és hozzáférni a különböző szolgáltatásokhoz. Tartalmazza az "Áttekintés", "Riasztások", "Kedvencek", "Beállítások", "Segítség", "Visszajelzés" opciókat.
+
 
 ### Jelenlegi üzleti folyamatok:
 

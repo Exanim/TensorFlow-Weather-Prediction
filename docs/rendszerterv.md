@@ -247,6 +247,14 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
 > Röviden: Felhasználó kiválaszthat és rögzíthet kedvenc helyeket (otthon, munkahely stb.).
 > Rendszer könnyű hozzáférést biztosít az elmentett helyekhez és személyre szabott időjárási információkat kínál.
 
+> ### Navigációs Sáv
+> Röviden: Felhasználó gyorsan áttekintheti az aktuális időjárást az egységes navigációs sáv segítségével.
+> "Riasztások" opcióval riasztások és figyelmeztetések megtekintése.
+> "Kedvencek" opcióval gyors hozzáférés kedvenc helyek időjárásához.
+> "Beállítások" opcióval személyre szabható beállítások.
+> "Segítség" opcióval alkalmazás-használati információk elérése.
+> "Visszajelzés" opcióval felhasználói visszajelzések beküldése a fejlesztéshez.
+
 ### Nemfunkcionális követelmények
 
 > ### A webalkalmazás gyors és reszponzív működése.
@@ -289,6 +297,44 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
 >- Felhasználó megnyitja az alkalmazást.
 >- A "Kedvenc Helyek" menüponton keresztül eléri az elmentett helyeket.
 >Kattint a kívánt helyre, hogy megtekintse a személyre szabott időjárási >információkat.
+
+#### Navigációs Sáv
+
+##### Aktuális Időjárás Áttekintése
+- Felhasználó gyorsan áttekintheti az aktuális időjárást az egységes navigációs sáv segítségével.
+>###### Lefutás:
+>- Felhasználó navigál az "Áttekintés" opcióhoz a navigációs sávon.
+>- Áttekintheti az aktuális időjárást.
+
+##### Riasztások Megtekintése
+- Felhasználó megtekinti az aktuális időjárási riasztásokat és figyelmeztetéseket.
+>###### Lefutás:
+>- Felhasználó navigál az "Riasztások" opcióhoz a navigációs sávon.
+>- Megtekinti a riasztásokat és figyelmeztetéseket.
+
+##### Kedvencek Gyors Elérése
+- Felhasználó gyors hozzáférést kap kedvenc helyeinek időjárásához.
+>###### Lefutás:
+>- Felhasználó navigál az "Kedvencek" opcióhoz a navigációs sávon.
+>- Kattint a kívánt kedvenc helyre az azonnali időjárási információkért.
+
+##### Beállítások Személyre Szabása
+- Felhasználó testre szabja az alkalmazás beállításait.
+>###### Lefutás:
+>- Felhasználó navigál az "Beállítások" opcióhoz a navigációs sávon.
+>- Végrehajtja a személyre szabási lépéseket.
+
+##### Segítség Elérése
+- Felhasználó hozzáfér az alkalmazás-használati információkhoz.
+>###### Lefutás:
+>- Felhasználó navigál az "Segítség" opcióhoz a navigációs sávon.
+>- Böngészi az alkalmazás-használati információkat.
+
+##### Visszajelzés Beküldése
+- Felhasználó beküldi visszajelzéseit és értékeléseit az alkalmazás fejlesztéséhez.
+>###### Lefutás:
+>- Felhasználó navigál az "Visszajelzés" opcióhoz a navigációs sávon.
+>- Kitölti és beküldi a visszajelzés űrlapot.
 
 ### Határ osztályok
 
