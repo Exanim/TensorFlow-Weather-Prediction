@@ -144,6 +144,8 @@ majd kiválaszthatja, hogy annak a városnak mely adatára kíváncsi.
 - Widgeteket fejlesztése, amelyek lehetővé teszik az időjárás információinak gyors megtekintését a
   felhasználók kezdőképernyőjén.
 
+- Funkció létrehozása a kedvenc helyek időjárásának követésére és tárolására, amely révén a felhasználóknak képességük lesz kiválasztani, rögzíteni és nyomon követni a saját kedvenc helyeiket. Ez magába foglalja otthonukat, munkahelyüket vagy bármilyen más várost, amelyre kíváncsiak az időjárási viszonyok tekintetében. A rendszernek lehetővé kell tennie, hogy a felhasználók könnyedén hozzáférjenek ezekhez az elmentett helyekhez, és az aktuális időjárási információkat személyre szabottan megtekinthessék.
+
 ### Forgatókönyv
 
 1. Az alkalmazást a felhasználó megnyitja, majd rögtön elé tárul a felület, mely tartalmaz egy keresősort,

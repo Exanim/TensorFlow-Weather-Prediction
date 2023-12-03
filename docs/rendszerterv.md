@@ -243,6 +243,10 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
 > válaszból kapott adattal tudjon dolgozni az alkalmazásunk, ezáltal a szükséges megjelenítés ellátható
 > lesz azokkal
 
+> ### Kedvenc Helyek Kezelése
+> Röviden: Felhasználó kiválaszthat és rögzíthet kedvenc helyeket (otthon, munkahely stb.).
+> Rendszer könnyű hozzáférést biztosít az elmentett helyekhez és személyre szabott időjárási információkat kínál.
+
 ### Nemfunkcionális követelmények
 
 > ### A webalkalmazás gyors és reszponzív működése.
@@ -278,6 +282,13 @@ feldolgozza és felhasználó által feldolgozható formátumban megjelenítik.
 - A rendszer lekéri a város időjárási adatait.
 
 - Az adatok megjelenítése a felhasználónak.
+
+#### Hozzáférés Kedvenc Helyekhez:
+- Felhasználó könnyű hozzáférést kap az elmentett helyekhez.
+>###### Lefutás:
+>- Felhasználó megnyitja az alkalmazást.
+>- A "Kedvenc Helyek" menüponton keresztül eléri az elmentett helyeket.
+>Kattint a kívánt helyre, hogy megtekintse a személyre szabott időjárási >információkat.
 
 ### Határ osztályok
 

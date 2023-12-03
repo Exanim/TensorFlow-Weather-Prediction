@@ -74,6 +74,8 @@ legyen.
 - Widgeteket fejlesztése, amelyek lehetővé teszik az időjárás információinak gyors megtekintését a
 felhasználók kezdőképernyőjén.
 
+- Funkció hozzáadása, amely lehetővé teszi a felhasználók számára, hogy követhessék és tárolhassák kedvenc helyeik időjárását. Amely lehetővé teszi számukra, hogy könnyen ellenőrizzék a kiválasztott helyek aktuális időjárását.
+
 
 ### Jelenlegi üzleti folyamatok:
 
